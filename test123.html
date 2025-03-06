@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전집 메뉴판</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+
+    <!-- 헤더 -->
+    <div class="bg-white py-4 text-center text-lg font-bold border-b border-gray-300">
+        상상 빈대떡
+    </div>
+
+    <!-- 네비게이션 -->
+    <div class="flex justify-around bg-white py-3 border-b-2 border-gray-300">
+        <button class="tab-btn font-bold pb-1 border-b-4 border-black" onclick="showMenu('set-menu', this)">메인</button>
+        <button class="tab-btn font-bold pb-1 text-gray-500 border-b-4 border-transparent" onclick="showMenu('side-menu', this)">사이드</button>
+        <button class="tab-btn font-bold pb-1 text-gray-500 border-b-4 border-transparent" onclick="showMenu('test-menu', this)">테스트</button>
+    </div>
+
+    <!-- 메뉴 컨테이너 -->
+    <div class="p-4">
+        <!-- 세트메뉴 -->
+        <div class="bg-white p-4 mb-4 rounded-lg shadow relative">
+            <!-- 텍스트와 배지를 한 줄에 배치 -->
+            <div class="flex items-center gap-x-2">
+                <div class="text-lg font-bold">세트 1번</div>
+                <span class="inline-flex items-center rounded-md bg-red-50 px-2 py-1 text-xs font-medium text-red-700 ring-1 ring-red-600/10 ring-inset">
+                    👍강추
+                </span>
+            </div>
+            <div class="text-gray-500 text-sm mb-2">모듬전은 만들기 귀찮아</div>
+            <div class="flex items-center text-lg font-bold text-orange-700">
+                ₩13,000
+            </div>
+            <img src="https://ldb-phinf.pstatic.net/20231013_144/1697174193941czOzx_PNG/temp_file.png"  
+                 class="w-22 h-20 absolute right-4 bottom-4 cursor-pointer hover:opacity-80 object-contain">
+        </div>
+        
+
+            </span>
+            
+
+            <div class="bg-white p-4 mb-4 rounded-lg shadow relative">
+                <div class="text-lg font-bold mb-1">세트 1번</div>
+                <div class="text-gray-500 text-sm mb-2">모듬전은 만들기 귀찮아</div>
+                <div class="flex items-center text-lg font-bold text-orange-700">
+                    ₩13,000
+                </div>
+                <img src="https://ldb-phinf.pstatic.net/20231013_144/1697174193941czOzx_PNG/temp_file.png"  
+                     class="w-20 h-20 absolute right-4 bottom-4 cursor-pointer hover:opacity-80 object-contain">
+            </div>
+        </span>
+
+        <!-- 사이드 메뉴 -->
+        <div id="side-menu" class="menu-content hidden">
+            <div class="bg-white p-4 mb-4 rounded-lg shadow">
+                <div class="text-lg font-bold mb-1">사이드 1번) 감자튀김</div>
+                <div class="text-gray-500 text-sm mb-2">바삭한 감자튀김</div>
+                <div class="flex justify-between items-center text-lg font-bold text-orange-700">
+                    ₩5,000
+                    <img src="cart-icon.png" alt="담기" class="w-10 h-10 cursor-pointer hover:opacity-80">
+                </div>
+            </div>
+        </div>
+
+        <!-- 테스트 메뉴 -->
+        <div id="test-menu" class="menu-content hidden">
+            <div class="bg-white p-4 mb-4 rounded-lg shadow">
+                <div class="text-lg font-bold mb-1">테스트 메뉴</div>
+                <div class="text-gray-500 text-sm mb-2">테스트용 메뉴</div>
+                <div class="flex justify-between items-center text-lg font-bold text-orange-700">
+                    ₩10,000
+                    <img src="cart-icon.png" alt="담기" class="w-10 h-10 cursor-pointer hover:opacity-80">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        function showMenu(menuId, button) {
+            // 모든 메뉴 숨기기
+            document.querySelectorAll('.menu-content').forEach(menu => {
+                menu.classList.add('hidden');
+            });
+
+            // 선택한 메뉴 표시
+            document.getElementById(menuId).classList.remove('hidden');
+
+            // 모든 버튼 스타일 초기화
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('border-black', 'text-black');
+                btn.classList.add('text-gray-500', 'border-transparent');
+            });
+
+            // 클릭된 버튼 스타일 변경
+            button.classList.add('border-black', 'text-black');
+            button.classList.remove('text-gray-500', 'border-transparent');
+        }
+    </script>
+
+</body>
+</html>
