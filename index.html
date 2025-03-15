@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>전집 메뉴판</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="#">
 </head>
 <body class="bg-gray-100">
 
@@ -15,49 +16,202 @@
 
     <!-- 네비게이션 -->
     <div class="flex justify-around bg-white py-3 border-b-2 border-gray-300">
-        <button class="tab-btn font-bold pb-1 border-b-4 border-black" onclick="showMenu('set-menu', this)">메인</button>
-        <button class="tab-btn font-bold pb-1 text-gray-500 border-b-4 border-transparent" onclick="showMenu('side-menu', this)">사이드</button>
-        <button class="tab-btn font-bold pb-1 text-gray-500 border-b-4 border-transparent" onclick="showMenu('test-menu', this)">테스트</button>
+        <button class="tab-btn font-bold pb-1 border-b-4 border-black" onclick="showMenu('nokdu-menu', this)">녹두빈대떡</button>
+        <button class="tab-btn font-bold pb-1 text-gray-500 border-b-4 border-transparent" onclick="showMenu('side-menu', this)">파전</button>
+        <button class="tab-btn font-bold pb-1 text-gray-500 border-b-4 border-transparent" onclick="showMenu('side-menu-2', this)">사이드</button>
+        <button class="tab-btn font-bold pb-1 text-gray-500 border-b-4 border-transparent" onclick="showMenu('drink-menu', this)">주류</button>
     </div>
 
     <!-- 메뉴 컨테이너 -->
     <div class="p-4">
-        <!-- 세트메뉴 -->
-        <div class="bg-white p-4 mb-4 rounded-lg shadow relative">
-            <!-- 텍스트와 배지를 한 줄에 배치 -->
-            <div class="flex items-center gap-x-2">
-                <div class="text-lg font-bold">세트 1번</div>
-                <span class="inline-flex items-center rounded-md bg-red-50 px-2 py-1 text-xs font-medium text-red-700 ring-1 ring-red-600/10 ring-inset">
-                    👍강추
-                </span>
-            </div>
-            <div class="text-gray-500 text-sm mb-2">모듬전은 만들기 귀찮아</div>
-            <div class="flex items-center text-lg font-bold text-orange-700">
-                ₩13,000
-            </div>
-            <img src="https://ldb-phinf.pstatic.net/20231013_144/1697174193941czOzx_PNG/temp_file.png"  
-                 class="w-22 h-20 absolute right-4 bottom-4 cursor-pointer hover:opacity-80 object-contain">
-        </div>
-        
-
-            </span>
-            
-
+        <!-- 녹두빈대떡 메뉴 네비게이션(기본으로 보이게 설정) -->
+         <!-- 고기김치빈대떡 -->
+        <div id="nokdu-menu" class="menu-content">
             <div class="bg-white p-4 mb-4 rounded-lg shadow relative">
-                <div class="text-lg font-bold mb-1">세트 1번</div>
+                <div class="flex items-center gap-x-2">
+                    <div class="text-lg font-bold">고기김치빈대떡</div>
+                    <span class="inline-flex items-center rounded-md bg-red-50 px-2 py-1 text-xs font-medium text-red-700 ring-1 ring-red-600/10 ring-inset">
+                        👍강추
+                    </span>
+                </div>
+                <div class="text-gray-500 text-sm mb-2">모듬전은 만들기 귀찮아</div>
+                <div class="flex items-center text-lg font-bold text-orange-700">
+                    ₩14,000
+                </div>
+                <img src="/img/고기김치빈대떡.png"  
+                     class="w-22 h-20 absolute right-4 bottom-4 cursor-pointer hover:opacity-80 object-contain">
+            </div>
+            <!-- 섞어빈대떡 -->
+            <div class="bg-white p-4 mb-4 rounded-lg shadow relative">
+                <div class="flex items-center gap-x-2">
+                    <div class="text-lg font-bold">섞어빈대떡</div>
+                    <span class="inline-flex items-center rounded-md bg-red-50 px-2 py-1 text-xs font-medium text-red-700 ring-1 ring-red-600/10 ring-inset">
+                        👍강추
+                    </span>
+                </div>
+                <div class="text-gray-500 text-sm mb-2">모듬전은 만들기 귀찮아</div>
+                <div class="flex items-center text-lg font-bold text-orange-700">
+                    ₩17,000
+                </div>
+                <img src="/img/섞어빈대떡.jpg"  
+                     class="w-22 h-20 absolute right-4 bottom-4 cursor-pointer hover:opacity-80 object-contain">
+            </div>
+            <!-- 고기빈대떡 -->
+            <div class="bg-white p-4 mb-4 rounded-lg shadow relative">
+                <div class="flex items-center gap-x-2">
+                    <div class="text-lg font-bold">고기빈대떡</div>
+                    <span class="inline-flex items-center rounded-md bg-red-50 px-2 py-1 text-xs font-medium text-red-700 ring-1 ring-red-600/10 ring-inset">
+                        👍강추
+                    </span>
+                </div>
                 <div class="text-gray-500 text-sm mb-2">모듬전은 만들기 귀찮아</div>
                 <div class="flex items-center text-lg font-bold text-orange-700">
                     ₩13,000
                 </div>
-                <img src="https://ldb-phinf.pstatic.net/20231013_144/1697174193941czOzx_PNG/temp_file.png"  
-                     class="w-20 h-20 absolute right-4 bottom-4 cursor-pointer hover:opacity-80 object-contain">
+                <img src="/img/고기빈대떡.png"  
+                     class="w-22 h-20 absolute right-4 bottom-4 cursor-pointer hover:opacity-80 object-contain">
             </div>
-        </span>
+            <!-- 굴빈대떡 -->
+            <div class="bg-white p-4 mb-4 rounded-lg shadow relative">
+                <div class="flex items-center gap-x-2">
+                    <div class="text-lg font-bold">굴빈대떡</div>
+                    <span class="inline-flex items-center rounded-md bg-red-50 px-2 py-1 text-xs font-medium text-red-700 ring-1 ring-red-600/10 ring-inset">
+                        👍강추
+                    </span>
+                </div>
+                <div class="text-gray-500 text-sm mb-2">모듬전은 만들기 귀찮아</div>
+                <div class="flex items-center text-lg font-bold text-orange-700">
+                    ₩14,000
+                </div>
+                <img src="/img/굴빈대떡.jpg"  
+                     class="w-22 h-20 absolute right-4 bottom-4 cursor-pointer hover:opacity-80 object-contain">
+            </div>
+            <!-- 김치고추빈대떡 -->
+            <div class="bg-white p-4 mb-4 rounded-lg shadow relative">
+                <div class="flex items-center gap-x-2">
+                    <div class="text-lg font-bold">김치고추빈대떡</div>
+                    <span class="inline-flex items-center rounded-md bg-red-50 px-2 py-1 text-xs font-medium text-red-700 ring-1 ring-red-600/10 ring-inset">
+                        👍강추
+                    </span>
+                </div>
+                <div class="text-gray-500 text-sm mb-2">모듬전은 만들기 귀찮아</div>
+                <div class="flex items-center text-lg font-bold text-orange-700">
+                    ₩13,000
+                </div>
+                <img src="/img/고기김치빈대떡.png"  
+                     class="w-22 h-20 absolute right-4 bottom-4 cursor-pointer hover:opacity-80 object-contain">
+            </div>
+            <!-- 김치빈대떡 -->
+            <div class="bg-white p-4 mb-4 rounded-lg shadow relative">
+                <div class="flex items-center gap-x-2">
+                    <div class="text-lg font-bold">김치빈대떡</div>
+                    <span class="inline-flex items-center rounded-md bg-red-50 px-2 py-1 text-xs font-medium text-red-700 ring-1 ring-red-600/10 ring-inset">
+                        👍강추
+                    </span>
+                </div>
+                <div class="text-gray-500 text-sm mb-2">모듬전은 만들기 귀찮아</div>
+                <div class="flex items-center text-lg font-bold text-orange-700">
+                    ₩12,000
+                </div>
+                <img src="/img/고기김치빈대떡.png"  
+                     class="w-22 h-20 absolute right-4 bottom-4 cursor-pointer hover:opacity-80 object-contain">
+            </div>
 
-        <!-- 사이드 메뉴 -->
+            <!-- 고기고추빈대떡 -->
+            <div class="bg-white p-4 mb-4 rounded-lg shadow relative">
+                <div class="flex items-center gap-x-2">
+                    <div class="text-lg font-bold">고기고추빈대떡</div>
+                    <span class="inline-flex items-center rounded-md bg-red-50 px-2 py-1 text-xs font-medium text-red-700 ring-1 ring-red-600/10 ring-inset">
+                        👍강추
+                    </span>
+                </div>
+                <div class="text-gray-500 text-sm mb-2">모듬전은 만들기 귀찮아</div>
+                <div class="flex items-center text-lg font-bold text-orange-700">
+                    ₩14,000
+                </div>
+                <img src="/img/고기김치빈대떡.png"  
+                     class="w-22 h-20 absolute right-4 bottom-4 cursor-pointer hover:opacity-80 object-contain">
+            </div>
+
+            <!-- 고기김치고추빈대떡 -->
+            <div class="bg-white p-4 mb-4 rounded-lg shadow relative">
+                <div class="flex items-center gap-x-2">
+                    <div class="text-lg font-bold">고기고추김치빈대떡</div>
+                    <span class="inline-flex items-center rounded-md bg-red-50 px-2 py-1 text-xs font-medium text-red-700 ring-1 ring-red-600/10 ring-inset">
+                        👍강추
+                    </span>
+                </div>
+                <div class="text-gray-500 text-sm mb-2">모듬전은 만들기 귀찮아</div>
+                <div class="flex items-center text-lg font-bold text-orange-700">
+                    ₩15,000
+                </div>
+                <img src="/img/고기김치빈대떡.png"  
+                     class="w-22 h-20 absolute right-4 bottom-4 cursor-pointer hover:opacity-80 object-contain">
+            </div>
+            <!-- 굴고추빈대떡 -->
+            <div class="bg-white p-4 mb-4 rounded-lg shadow relative">
+                <div class="flex items-center gap-x-2">
+                    <div class="text-lg font-bold">굴고추빈대떡</div>
+                    <span class="inline-flex items-center rounded-md bg-red-50 px-2 py-1 text-xs font-medium text-red-700 ring-1 ring-red-600/10 ring-inset">
+                        👍강추
+                    </span>
+                </div>
+                <div class="text-gray-500 text-sm mb-2">모듬전은 만들기 귀찮아</div>
+                <div class="flex items-center text-lg font-bold text-orange-700">
+                    ₩15,000
+                </div>
+                <img src="/img/고기김치빈대떡.png"  
+                     class="w-22 h-20 absolute right-4 bottom-4 cursor-pointer hover:opacity-80 object-contain">
+            </div>
+            <!-- 굴고기빈대떡 -->
+            <div class="bg-white p-4 mb-4 rounded-lg shadow relative">
+                <div class="flex items-center gap-x-2">
+                    <div class="text-lg font-bold">굴고기빈대떡</div>
+                    <span class="inline-flex items-center rounded-md bg-red-50 px-2 py-1 text-xs font-medium text-red-700 ring-1 ring-red-600/10 ring-inset">
+                        👍강추
+                    </span>
+                </div>
+                <div class="text-gray-500 text-sm mb-2">모듬전은 만들기 귀찮아</div>
+                <div class="flex items-center text-lg font-bold text-orange-700">
+                    ₩16,000
+                </div>
+                <img src="/img/고기김치빈대떡.png"  
+                     class="w-22 h-20 absolute right-4 bottom-4 cursor-pointer hover:opacity-80 object-contain">
+            </div>
+            <!-- 빈대떡 -->
+            <div class="bg-white p-4 mb-4 rounded-lg shadow relative">
+                <div class="flex items-center gap-x-2">
+                    <div class="text-lg font-bold">빈대떡</div>
+                    <span class="inline-flex items-center rounded-md bg-red-50 px-2 py-1 text-xs font-medium text-red-700 ring-1 ring-red-600/10 ring-inset">
+                        👍강추
+                    </span>
+                </div>
+                <div class="text-gray-500 text-sm mb-2">모듬전은 만들기 귀찮아</div>
+                <div class="flex items-center text-lg font-bold text-orange-700">
+                    ₩16,000
+                </div>
+                <img src="/img/고기김치빈대떡.png"  
+                     class="w-22 h-20 absolute right-4 bottom-4 cursor-pointer hover:opacity-80 object-contain">
+            </div>
+
+
+        </div>
+
+        <!-- 파전 네비게이션 -->
         <div id="side-menu" class="menu-content hidden">
             <div class="bg-white p-4 mb-4 rounded-lg shadow">
-                <div class="text-lg font-bold mb-1">사이드 1번) 감자튀김</div>
+                <div class="text-lg font-bold mb-1">해물파전</div>
+                <div class="text-gray-500 text-sm mb-2">신선한 해산물이 가득한 파전</div>
+                <div class="flex justify-between items-center text-lg font-bold text-orange-700">
+                    ₩10,000
+                </div>
+            </div>
+        </div>
+
+        <!-- 사이드 메뉴 -->
+        <div id="side-menu-2" class="menu-content hidden">
+            <div class="bg-white p-4 mb-4 rounded-lg shadow">
+                <div class="text-lg font-bold mb-1">감자튀김</div>
                 <div class="text-gray-500 text-sm mb-2">바삭한 감자튀김</div>
                 <div class="flex justify-between items-center text-lg font-bold text-orange-700">
                     ₩5,000
@@ -66,14 +220,13 @@
             </div>
         </div>
 
-        <!-- 테스트 메뉴 -->
-        <div id="test-menu" class="menu-content hidden">
+        <!-- 주류 메뉴 -->
+        <div id="drink-menu" class="menu-content hidden">
             <div class="bg-white p-4 mb-4 rounded-lg shadow">
-                <div class="text-lg font-bold mb-1">테스트 메뉴</div>
-                <div class="text-gray-500 text-sm mb-2">테스트용 메뉴</div>
+                <div class="text-lg font-bold mb-1">소주</div>
+                <div class="text-gray-500 text-sm mb-2">한국 대표 전통주</div>
                 <div class="flex justify-between items-center text-lg font-bold text-orange-700">
-                    ₩10,000
-                    <img src="cart-icon.png" alt="담기" class="w-10 h-10 cursor-pointer hover:opacity-80">
+                    ₩4,000
                 </div>
             </div>
         </div>
@@ -100,6 +253,11 @@
             button.classList.add('border-black', 'text-black');
             button.classList.remove('text-gray-500', 'border-transparent');
         }
+
+        // 기본 메뉴 보이도록 설정
+        document.addEventListener("DOMContentLoaded", function () {
+            showMenu('nokdu-menu', document.querySelector('.tab-btn'));
+        });
     </script>
 
 </body>
